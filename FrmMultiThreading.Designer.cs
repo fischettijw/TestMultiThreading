@@ -35,12 +35,16 @@
             this.Bgw2 = new System.ComponentModel.BackgroundWorker();
             this.LblCount03 = new System.Windows.Forms.Label();
             this.CbxBackgroundWorker = new System.Windows.Forms.CheckBox();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.LblAddAnswer = new System.Windows.Forms.Label();
+            this.TxtNum01 = new System.Windows.Forms.TextBox();
+            this.TxtNum02 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnStart
             // 
             this.BtnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnStart.Location = new System.Drawing.Point(154, 43);
+            this.BtnStart.Location = new System.Drawing.Point(57, 42);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.Size = new System.Drawing.Size(140, 48);
             this.BtnStart.TabIndex = 0;
@@ -51,7 +55,7 @@
             // LblCount01
             // 
             this.LblCount01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCount01.Location = new System.Drawing.Point(135, 119);
+            this.LblCount01.Location = new System.Drawing.Point(38, 118);
             this.LblCount01.Name = "LblCount01";
             this.LblCount01.Size = new System.Drawing.Size(179, 50);
             this.LblCount01.TabIndex = 1;
@@ -61,7 +65,7 @@
             // LblCount02
             // 
             this.LblCount02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCount02.Location = new System.Drawing.Point(135, 198);
+            this.LblCount02.Location = new System.Drawing.Point(38, 197);
             this.LblCount02.Name = "LblCount02";
             this.LblCount02.Size = new System.Drawing.Size(179, 50);
             this.LblCount02.TabIndex = 2;
@@ -85,7 +89,7 @@
             // LblCount03
             // 
             this.LblCount03.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCount03.Location = new System.Drawing.Point(135, 272);
+            this.LblCount03.Location = new System.Drawing.Point(38, 271);
             this.LblCount03.Name = "LblCount03";
             this.LblCount03.Size = new System.Drawing.Size(179, 50);
             this.LblCount03.TabIndex = 3;
@@ -95,25 +99,73 @@
             // CbxBackgroundWorker
             // 
             this.CbxBackgroundWorker.AutoSize = true;
+            this.CbxBackgroundWorker.Checked = true;
+            this.CbxBackgroundWorker.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CbxBackgroundWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbxBackgroundWorker.Location = new System.Drawing.Point(126, 366);
+            this.CbxBackgroundWorker.Location = new System.Drawing.Point(29, 365);
             this.CbxBackgroundWorker.Name = "CbxBackgroundWorker";
             this.CbxBackgroundWorker.Size = new System.Drawing.Size(197, 28);
             this.CbxBackgroundWorker.TabIndex = 4;
             this.CbxBackgroundWorker.Text = "Background Worker";
             this.CbxBackgroundWorker.UseVisualStyleBackColor = true;
             // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.Location = new System.Drawing.Point(275, 42);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(140, 48);
+            this.BtnAdd.TabIndex = 5;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // LblAddAnswer
+            // 
+            this.LblAddAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAddAnswer.Location = new System.Drawing.Point(256, 271);
+            this.LblAddAnswer.Name = "LblAddAnswer";
+            this.LblAddAnswer.Size = new System.Drawing.Size(179, 50);
+            this.LblAddAnswer.TabIndex = 6;
+            this.LblAddAnswer.Text = "0";
+            this.LblAddAnswer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtNum01
+            // 
+            this.TxtNum01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNum01.Location = new System.Drawing.Point(256, 128);
+            this.TxtNum01.Name = "TxtNum01";
+            this.TxtNum01.ReadOnly = true;
+            this.TxtNum01.Size = new System.Drawing.Size(179, 29);
+            this.TxtNum01.TabIndex = 7;
+            this.TxtNum01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtNum02
+            // 
+            this.TxtNum02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNum02.Location = new System.Drawing.Point(256, 207);
+            this.TxtNum02.Name = "TxtNum02";
+            this.TxtNum02.ReadOnly = true;
+            this.TxtNum02.Size = new System.Drawing.Size(179, 29);
+            this.TxtNum02.TabIndex = 8;
+            this.TxtNum02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmMultiThreading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 450);
+            this.ClientSize = new System.Drawing.Size(469, 450);
+            this.Controls.Add(this.TxtNum02);
+            this.Controls.Add(this.TxtNum01);
+            this.Controls.Add(this.LblAddAnswer);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.CbxBackgroundWorker);
             this.Controls.Add(this.LblCount03);
             this.Controls.Add(this.LblCount02);
             this.Controls.Add(this.LblCount01);
             this.Controls.Add(this.BtnStart);
             this.Name = "FrmMultiThreading";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multi-Threading";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,6 +181,10 @@
         private System.ComponentModel.BackgroundWorker Bgw2;
         private System.Windows.Forms.Label LblCount03;
         private System.Windows.Forms.CheckBox CbxBackgroundWorker;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Label LblAddAnswer;
+        private System.Windows.Forms.TextBox TxtNum01;
+        private System.Windows.Forms.TextBox TxtNum02;
     }
 }
 

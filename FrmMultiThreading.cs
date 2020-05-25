@@ -23,6 +23,10 @@ namespace TestMultiThreading
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
+            LblCount01.Text = "";
+            LblCount02.Text = "";
+            LblCount03.Text = "";
+
             if (CbxBackgroundWorker.Checked)
             {
                 Bgw1.RunWorkerAsync();
@@ -78,6 +82,14 @@ namespace TestMultiThreading
         private void Bgw2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             BtnStart.Text = "02 FINISHED";
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            TxtNum01.Text = rnd.Next(-100, 100).ToString();
+            TxtNum02.Text = rnd.Next(-100, 100).ToString();
+            LblAddAnswer.Text = (Convert.ToInt32(TxtNum01.Text) + Convert.ToInt32(TxtNum02.Text)).ToString();
         }
     }
 }
